@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bandeira Teste</title>
+    <style>
+        .flag-container {
+            position: absolute;
+            top: 5;
+            right: 500px;
+            cursor: pointer;
+        }
+        
+        .flag-container img {
+            width: 35px;
+            height: 30px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            padding: 0px;
+            border: 0px solid #ccc;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            margin-bottom: 3px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .flag-container:hover .dropdown-content {
+            display: block;
+        }
+        .arrow-down {
+            position: relative;
+            display: inline-block;
+            width: 0;
+            height: 10px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+            margin-left: 3px;
+        }
+    </style>
+    <script>
+        function abrirJanela(url) {
+            window.open(url, '_blank', 'width=400,height=300');
+        }
+    </script>
+</head>
+<body>
+    <div class="flag-container">
+        <img src="Bandeira EUA.jpg" alt="EUA" onclick="abrirJanela('estados_unidos.html')">
+        <div class="dropdown-content">
+            <a href="javascript:void(0)" onclick="abrirJanela('index.html')">
+                <img src="Bandeira Brasil.jpg" alt="BRA">
+            </a>
+        </div>
+        <div class="arrow-down"></div>
+    </div>
+</body>
+</html>
